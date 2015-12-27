@@ -1,0 +1,121 @@
+<!--View Information-->
+<!--View name : Cloth Shop-->
+<!--State name : app.clothShop-->
+<!--URL : #app/clothShop-->
+
+<ion-view title="Material Store">
+    <!--cloth shop section-->
+    <ion-content id="cloth-shop-content">
+
+        <!--toolbar section-->
+        <md-toolbar class="bar-subheader md-tall md-primary toolbar-medium toolbar-in-content">
+            <div>
+                <h1>勁減40%</h1>
+
+                <h2>SALE 40% OFF</h2>
+
+                <h2>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </h2>
+            </div>
+        </md-toolbar><!--end toolbar section-->
+
+        <!--product list content-->
+        <div id="product-list" class="row">
+
+            <div class="col">
+                               <!--pin section-->
+            <div class="pin" ng-click="showConfirmDialog($event)">
+                <img ng-src="{{'img/shirt_01.png'}}"/>
+
+                <h1>Neat</h1>
+
+                <p>
+                    韓國Neat簡約短袖
+                </p>
+
+                <div class="pin-footer">
+                    $<span class="pin-footer text-left font-sale">590</span>
+                    <span class="pin-footer text-left font-hot-sale">$59</span>
+                </div>
+            </div><!--end pin section-->
+                 <div class="pin" ng-click="showConfirmDialog($event)">
+                <img ng-src="{{'img/shirt_02.png'}}"/>
+
+                <h1>Plain Shirt</h1>
+
+                <p>
+                    香港本土品牌
+                </p>
+
+                <div class="pin-footer">
+                    $<span class="pin-footer text-left font-sale">590</span>
+                    <span class="pin-footer text-left font-hot-sale">$59</span>
+                </div>
+            </div><!--end pin section-->
+                
+            </div>
+
+            <div class="col">
+                 <div class="pin" ng-click="showConfirmDialog($event)">
+                <img ng-src="{{'img/shirt_03.png'}}"/>
+
+                <h1>Shelibore</h1>
+
+                <p>
+                   歐洲Shelibore春季新款
+                </p>
+
+                <div class="pin-footer">
+                    $<span class="pin-footer text-left font-sale">590</span>
+                    <span class="pin-footer text-left font-hot-sale">$59</span>
+                </div>
+            </div><!--end pin section-->
+                  <div class="pin" ng-click="showConfirmDialog($event)">
+                <img ng-src="{{'img/shirt_04.png'}}"/>
+
+                <h1>Plain Shirt</h1>
+
+                <p>
+                    A shirt with plain design.
+                </p>
+
+                <div class="pin-footer">
+                    $<span class="pin-footer text-left font-sale">590</span>
+                    <span class="pin-footer text-left font-hot-sale">$59</span>
+                </div>
+            </div><!--end pin section-->
+                  <div class="pin" ng-click="showConfirmDialog($event)">
+                <img ng-src="{{'img/shirt_04.png'}}"/>
+
+                <h1>Plain Shirt</h1>
+
+                <p>
+                    A shirt with plain design.
+                </p>
+
+                <div class="pin-footer">
+                    $<span class="pin-footer text-left font-sale">590</span>
+                    <span class="pin-footer text-left font-hot-sale">$59</span>
+                </div>
+            </div><!--end pin section-->
+            </div>
+        </div><!--end product list content-->
+        
+        
+        
+       
+        
+        
+    </ion-content><!--end cloth shop section-->
+   <!--footer fab bar-->
+    <div class="footer-fab-bar">
+        <a class="md-button md-accent md-fab fab-footer" ng-click="navigateTo('app.notedetail')" aria-label="Add">
+            <i class="ion-android-cart"></i>
+        </a>
+    </div><!--end footer fab bar-->
+</ion-view>
