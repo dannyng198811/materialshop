@@ -33,18 +33,39 @@ appControllers.controller('menuCtrl', function ($scope, $timeout, $mdUtil, $mdSi
     };// End navigateTo.
     
     
-    $scope.cats = [{
-                    cat:'上衣',
-                    subcat:[{cat:'連衫裙'}, {cat:'毛衣'},{cat:'衛衣'},{cat:'襯衫'},{cat:'短外套'}]
-                }
-                ,{
-                    cat:'裙',
-                    subcat:[{cat:'長裙'}, {cat:'短裙'},{cat:'迷你裙'}]
-                }
-                ,{
-                     cat:'褲',
-                    subcat:[{cat:'牛仔褲'}, {cat:'休閒褲'},{cat:'棉褲'}]
-                }]
+     Parse.initialize("kzEok8tV4jX2K5XCZuzlljZuC22zBQaks2jHT49d", "7i5Ni1R9GRG7FVdXWpoWNMLNQ7qp8QyvNJW9fBT1");    
+    var Category = Parse.Object.extend("Category");
+    
+      var query = new Parse.Query(Category);
+    
+     
+      query.find( {
+      success: function(results) {
+      
+      $scope.cats = [];
+         for (var i = 0; i < results.length; i++) {
+              $scope.cats[i]={}
+            $scope.cats[i].id = results[i].get('objectId')  
+            $scope.cats[i].cat = results[i].get('cat')
+             $scope.cats[i].subcat =results[i].get('subcat')
+            }  
+          
+          
+          
+          
+          
+      },
+      error: function(model, error) {
+         console.log('error');
+      }
+    });
+   
+    
+    
+    
+    
+    
+    
     
     
     
